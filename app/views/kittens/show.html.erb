@@ -1,0 +1,7 @@
+<h2> Hey look at my Cat!</h2>
+<p>My cats name is  <%= @kitten.name %></p>
+<p>and it is <%= @kitten.age %> months old</p>
+<p>and it is a <%= @kitten.cuteness %> out of 10 on the cuteness scale</p>
+<p>and ranks in with a <%= @kitten.softness %> out of 10 on the softness scale</p>
+
+<%= link_to "Delete", @kitten, :method => :delete %>

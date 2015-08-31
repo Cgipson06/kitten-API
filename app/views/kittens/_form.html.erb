@@ -1,0 +1,20 @@
+<%= form_for @kitten do |k| %>
+  <%= k.label :name, "Name" %>
+  <%= k.text_field :name %>
+  
+  <%= k.label :age, "Age" %>
+  <%= k.select :age, options_for_select(1..10) %>
+  
+  <%= k.label :cuteness, "Cuteness" %>
+  <%= k.select :cuteness, options_for_select(1..10) %>
+  
+  <%= k.label :softness, "Softness" %>
+  <%= k.select :softness, options_for_select(1..10) %>
+  
+  <%= k.submit "Submit" %>
+  
+  <% unless @kitten.id.nil? %>
+    <%= k.hidden_field :id, value: @kitten.id %>
+  <% end %>
+   
+<% end %>

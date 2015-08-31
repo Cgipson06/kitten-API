@@ -1,0 +1,14 @@
+<h2>My Cat Collection</h2>
+<% @kitten.each do |k| %>
+<ul>
+  <%=link_to k.name, kitten_path(Kitten.find(k.id)) %>
+  <ul>
+    <li>id: <%= k.id %> </li>
+    <li>age: <%= k.age %> months</li>
+    <li>cuteness: <%=k.cuteness %></li>
+    <li>softness: <%= k.softness %></li>
+    <li><%= link_to "Delete this kitty", Kitten.find(k.id), :method => :delete %>
+  </ul>
+
+  </ul>
+<% end %>
