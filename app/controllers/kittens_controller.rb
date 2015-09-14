@@ -48,10 +48,6 @@ class KittensController < ApplicationController
     
   end
   
-  
-  
-
-  
   def destroy
    @kitten = Kitten.find(params[:id])
    if @kitten.delete
